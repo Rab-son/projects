@@ -13,7 +13,7 @@ class SignupRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,15 @@ class SignupRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|string|max:55',
+            'email' => 'required|email|unique:users,email',
+            'password' => [ 
+                'required',
+                'confirmed',
+                Password::min(8)
+                ->letters()
+                ->password()
+            ]
         ];
     }
 }

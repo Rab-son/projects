@@ -1,0 +1,8 @@
+export function GuestLayout(){
+    return(
+        <>
+        
+        
+        </>
+    )
+}

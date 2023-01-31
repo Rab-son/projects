@@ -1,17 +1,16 @@
-import { Outlet } from "react-router-dom";
-import {createBrowserRouter, Navigate} from 'react-router-dom';
+import {Navigate, Outlet} from "react-router-dom";
 import { useStateContext } from "../context/ContextProvider";
 
-export function GuestLayout(){
+export default function GuestLayout() {
+  const { user, token } = useStateContext();
 
-    const {token} = useStateContext()
-    if(token){
-        return <Navigate to={"/"} />
-    }
+  if (token) {
+    return <Navigate to="/" />;
+  }
 
-    return(
-        <div>
-            <Outlet/>
-        </div>
-    )
+  return (
+    <div id="guestLayout">
+      <Outlet />
+    </div>
+  );
 }

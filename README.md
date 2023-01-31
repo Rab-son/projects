@@ -7,4 +7,4 @@
         - Delete User
         - Context API
         - Laravel REST API with Sanctum
-        - ![Alt text](users.png)
+        - ![Alt text](./react-laravel/users.png)

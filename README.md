@@ -6,4 +6,4 @@
         - View User
         - Delete User
         - Context API
-        - Laravel Sanctum
+        - Laravel REST API with Sanctum

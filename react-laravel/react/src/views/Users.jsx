@@ -63,18 +63,18 @@ export default function Users() {
           }
           {!loading &&
             <tbody>
-            {users.map(u => (
-              <tr key={u.id}>
-                <td>{u.id}</td>
+            {users.map((u, index) => (
+                <tr key={u.id}>
+                <td>{index + 1}</td>
                 <td>{u.name}</td>
                 <td>{u.email}</td>
                 <td>{u.created_at}</td>
                 <td>
-                  <Link className="btn-edit" to={'/users/' + u.id}>Edit</Link>
-                  &nbsp;
-                  <button className="btn-delete" onClick={ev => onDeleteClick(u)}>Delete</button>
+                    <Link className="btn-edit" to={'/users/' + u.id}>Edit</Link>
+                    &nbsp;
+                    <button className="btn-delete" onClick={ev => onDeleteClick(u)}>Delete</button>
                 </td>
-              </tr>
+                </tr>
             ))}
             </tbody>
           }

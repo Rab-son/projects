@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import {Link, createBrowserRouter, Navigate} from 'react-router-dom';
-import { useStateContext } from "../contexts/ContextProvider";
+import { useStateContext } from "../context/ContextProvider";
 
 export function DefaultLayout(){
     const {user, token} =  useStateContext()
